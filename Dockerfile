@@ -18,7 +18,7 @@ LABEL org.label-schema.build-date=$BUILD_DATE \
 COPY pmm.cnf /etc/mysql/conf.d/pmm.cnf
 
 RUN apt-get update \
-		&& apt-get install -y --no-install-recommends \
-			pmm-client \
-			percona-toolkit \
-		&& rm -rf /var/lib/apt/lists/* /tmp/*
+	&& apt-get install -y --no-install-recommends \
+		pmm-client \
+		percona-toolkit \
+	&& rm -rf /var/lib/apt/lists/* /tmp/*
