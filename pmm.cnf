@@ -1,0 +1,19 @@
+[mysqld]
+performance_schema
+#feedback=ON
+query_cache_limit	= 1M
+query_cache_size        = 16M
+general_log_file        = /var/log/mysql/mysql.log
+general_log             = 1
+slow_query_log		= 1
+slow_query_log_file	= /var/log/mysql/mysql-slow.log
+long_query_time = 2
+log-queries-not-using-indexes
+
+expire_logs_days	= 10
+max_binlog_size   = 100M
+
+#pendiente de probar
+#debug=d,info,error,query:o,/tmp/mysqld.trace
+#stack-trace
+#core-file
