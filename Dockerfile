@@ -21,4 +21,5 @@ RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		pmm-client \
 		percona-toolkit \
-	&& rm -rf /var/lib/apt/lists/* /tmp/*
+	&& rm -rf /var/lib/apt/lists/* /tmp/* \
+	&& chmod 644 /etc/mysql/conf.d/pmm.cnf
